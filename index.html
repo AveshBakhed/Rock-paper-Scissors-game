@@ -7,27 +7,33 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <button onclick=" playGame('Rock')" class="move-buttons"><img src="imgs/Rock-emoji.png" class="move-icons"></button>
-    <button onclick=" playGame('Paper')" class="move-buttons"><img src="imgs/Paper-emoji.png" class="move-icons"></button>
-    <button onclick=" playGame('Sissors')" class="move-buttons"><img src="imgs/Sissors-emoji.png" class="move-icons"></button>
-    <p class="js-result result">You lose</p>
-    <p class="js-moves move"></p>
-    <p class="js-score score"></p>
+    <div class="conatiner">
+      <h1>Rock Paper Scissors</h1>
+        <div class="choose-options">
+          <button onclick=" playGame('Rock')" class="move-buttons"><img src="imgs/Rock-emoji.png" class="move-icons"></button>
+          <button onclick=" playGame('Paper')" class="move-buttons"><img src="imgs/Paper-emoji.png" class="move-icons"></button>
+          <button onclick=" playGame('Sissors')" class="move-buttons"><img src="imgs/Sissors-emoji.png" class="move-icons"></button>
+        </div>
+      <p class="js-result result">You lose</p>
+      <p class="js-moves move"></p>
+      <p class="js-score score"></p>
 
-    <button
-      onclick="
+      <button
+        onclick="
 
-      score.wins = 0;
-      score.loss = 0;
-      score.Tie = 0;
-      updateScore();
-      localStorage.removeItem('score');
+        score.wins = 0;
+        score.loss = 0;
+        score.Tie = 0;
+        updateScore();
+        localStorage.removeItem('score');
 
-    " class="reset-score-button"
-    >
-      Reset score
-    </button>
+      " class="reset-score-button"
+      >
+        Reset score
+      </button>
+
+      <button class="auto-play-btn" onclick="autoPlay();">autoPlay</button>
+    </div>
 
     <script src="script.js"></script>
   </body>

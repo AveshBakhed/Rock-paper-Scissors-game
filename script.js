@@ -6,6 +6,25 @@
       };
 
       updateScore();
+      let isAutoPlaying = false;
+      let IntervalId ;
+
+      function autoPlay(){
+        if(!isAutoPlaying){
+            IntervalId = setInterval(function(){
+            const playerMove = pickComputerMove();
+            playGame(playerMove);
+            },1000)
+            isAutoPlaying = true;
+        }else{
+          clearInterval(IntervalId);
+          isAutoPlaying = false;
+
+        }
+        
+
+      }
+
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();

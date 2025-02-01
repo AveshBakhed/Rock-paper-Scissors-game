@@ -1,12 +1,48 @@
-body{
-    background-color: rgb(25, 25, 25);;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(25, 25, 25);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
   }
-  .move-icons{
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  
+  .choose-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .move-icons {
     width: 50px;
   }
-  .move-buttons{
+  
+  .move-buttons {
     background-color: transparent;
     border: 3px solid white;
     width: 120px;
@@ -14,16 +50,27 @@ body{
     border-radius: 60px;
     margin-right: 10px;
     cursor: pointer;
+    transition: transform 0.2s ease;
   }
-  .result{
+  
+  .move-buttons:hover {
+    transform: scale(1.1);
+  }
+  
+  .result {
     font-size: 25px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 20px;
   }
-  .score{
-    margin-top: 60px;
+  
+  .score {
+    margin-top: 30px;
   }
-  .reset-score-button{
+  p{
+    margin-top: 10%;
+  }
+  .reset-score-button,
+  .auto-play-btn {
     background-color: white;
     border: none;
     font-size: 15px;
@@ -31,4 +78,87 @@ body{
     cursor: pointer;
     border-radius: 8px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10%;
   }
+  
+  .reset-score-button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    .choose-options {
+      gap: 10px;
+    }
+  
+    .move-buttons {
+      width: 90px;
+      height: 90px;
+     
+    }
+  
+    .move-icons {
+      width: 40px;
+    }
+  
+    .result {
+      font-size: 22px;
+    }
+  
+    .score {
+      font-size: 18px;
+    }
+  
+    .reset-score-button,
+    .auto-play-btn {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .choose-options {
+      gap: 5px;
+    }
+  
+    .move-buttons {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .move-icons {
+      width: 30px;
+    }
+  
+    .result {
+      font-size: 20px;
+    }
+  
+    .score {
+      font-size: 16px;
+    }
+  
+    .reset-score-button,
+    .auto-play-btn {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+  }
+  
